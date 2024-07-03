@@ -1,6 +1,6 @@
 // src/domain/repositories/IJugadorRepository.ts
 
-import Jugador from '../models/jugador'; // Asegúrate de que la importación refleje el nuevo nombre
+import Jugador from '../models/jugador'; 
 
 export interface IJugadorRepository {
     save(jugador: Jugador): Promise<Jugador>;

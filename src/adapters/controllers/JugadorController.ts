@@ -1,12 +1,12 @@
 // src/adapters/controllers/jugadorController.ts
 import { Request, Response } from 'express';
-import { jugadorService } from '../../infrastructure/diContainer'; // Asegúrate de importar el servicio correcto
+import { jugadorService } from '../../infrastructure/diContainer'; 
 
 export const createJugador = async (req: Request, res: Response): Promise<void> => {
-    const { nombre, edad, nacionalidad, posicion } = req.body;
+    const { name, edad, posicion } = req.body; // Ajustar según los nombres de campo que recibes del cliente
     try {
-        console.log("Request to create jugador:", nombre);
-        const jugador = await jugadorService.createJugador(nombre, edad, nacionalidad, posicion);
+        console.log("Request to create jugador:", name);
+        const jugador = await jugadorService.createJugador(name, edad, posicion);
         res.status(201).json(jugador);
     } catch (error: unknown) {
         if (error instanceof Error) {
@@ -51,10 +51,10 @@ export const getAllJugadores = async (req: Request, res: Response): Promise<void
 
 export const updateJugador = async (req: Request, res: Response): Promise<void> => {
     const { id } = req.params;
-    const { nombre, edad, nacionalidad, posicion } = req.body;
+    const { name, edad, posicion } = req.body; // Ajustar según los nombres de campo que recibes del cliente
     try {
-        console.log("Request to update jugador:", id, nombre);
-        const jugador = await jugadorService.updateJugador(id, nombre, edad, nacionalidad, posicion);
+        console.log("Request to update jugador:", id, name);
+        const jugador = await jugadorService.updateJugador(id, name, edad, posicion);
         res.status(200).json(jugador);
     } catch (error: unknown) {
         if (error instanceof Error) {

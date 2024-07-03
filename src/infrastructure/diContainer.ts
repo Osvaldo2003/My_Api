@@ -3,7 +3,7 @@
 import { IJugadorRepository } from '../domain/repositories/IJugadorRepository';
 import MongoJugadorRepository from '../adapters/repositories/mongoJugadorRepository';
 import MySQLJugadorRepository from '../adapters/repositories/mysqlJugadorRepository';
-import JugadorService from '../application/services/jugadorService'; // Asegúrate de importar correctamente la clase JugadorService
+import JugadorService from '../application/services/jugadorService'; 
 import connectMongoDB from './database/mongoConnection';
 import connectMySQL from './database/mysqlConnection';
 import { S3StorageRepository } from '../adapters/repositories/s3StorageRepository';

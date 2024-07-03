@@ -1,6 +1,6 @@
 // src/domain/repositories/IEntrenadorRepository.ts
 
-import Entrenador from '../models/entrenador'; // Asegúrate de que la importación refleje el nuevo nombre
+import Entrenador from '../models/entrenador'; 
 
 export interface IEntrenadorRepository {
     save(entrenador: Entrenador): Promise<Entrenador>;

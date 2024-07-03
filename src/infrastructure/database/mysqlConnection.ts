@@ -7,7 +7,7 @@ const connectMySQL = async (): Promise<Connection> => {
     try {
         const connection = await mysql.createConnection({
             host: process.env.DB_HOST,
-            user: process.env.DB_Jugador, // Cambia DB_Alumno por DB_Jugador
+            user: process.env.DB_Jugador, 
             password: process.env.DB_PASSWORD,
             database: process.env.DB_NAME
         });

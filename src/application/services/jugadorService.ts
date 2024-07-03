@@ -38,4 +38,4 @@ export class JugadorService {
     }
 }
 
-export default JugadorService; // Asegúrate de exportar la clase aquí
+export default JugadorService; 
