@@ -9,3 +9,4 @@ app.listen(PORT, () => {
     console.log(`Server online on port ${PORT}`);
     console.log(`Using ${process.env.USE_MONGODB === 'true' ? 'MongoDB' : 'MySQL'} database`);
 });
+
