@@ -5,7 +5,8 @@
   "scripts": {
     "start:dev": "nodemon --exec ts-node src/infrastructure/server.ts",
     "start": "node dist/infrastructure/server.js",
-    "build": "node --max-old-space-size=4096 ./node_modules/typescript/bin/tsc"
+    "build": "node --max-old-space-size=4096 ./node_modules/typescript/bin/tsc",
+    "transpilation": "tsc --outDir ./dist"
   },
   "dependencies": {
     "aws-sdk": "^2.1648.0",
